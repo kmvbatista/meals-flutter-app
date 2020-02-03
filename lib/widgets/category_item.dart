@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class CategoryItem extends StatelessWidget {
   final String title;
   final Color color;
+  final String id;
 
-  CategoryItem(this.title, this.color);
+  CategoryItem(this.title, this.color, this.id);
   @override
   Widget build(BuildContext context) {
     return Container(
