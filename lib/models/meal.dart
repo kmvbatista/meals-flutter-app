@@ -9,17 +9,17 @@ class Meal {
   final List<String> categories;
   final String title;
   final String imageUrl;
-  final String steps;
+  final List<String> steps;
   final List<String> ingredients;
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
-  final bool isGluttenFree;
+  final bool isGlutenFree;
   final bool isLactoseFree;
   final bool isVegan;
   final bool isVegetarian;
 
-  Meal(
+  const Meal(
       {@required this.id,
       @required this.categories,
       @required this.affordability,
@@ -28,7 +28,7 @@ class Meal {
       @required this.duration,
       @required this.imageUrl,
       @required this.ingredients,
-      @required this.isGluttenFree,
+      @required this.isGlutenFree,
       @required this.isLactoseFree,
       @required this.isVegan,
       @required this.isVegetarian,
