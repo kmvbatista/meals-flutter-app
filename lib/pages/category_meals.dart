@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CategoryMeals extends StatelessWidget {
-  final String categoryId;
-  final String categoryTitle;
+  static const route = '/category-meals';
+  // final String categoryId;
+  // final String categoryTitle;
 
-  CategoryMeals({this.categoryId, this.categoryTitle});
+  // CategoryMeals({this.categoryId, this.categoryTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class CategoryMeals extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(categoryTitle)),
       body: Center(
-        child: Container(),
+        child: ListView.builder(itemBuilder: (ctx, builder) {}),
       ),
     );
   }
