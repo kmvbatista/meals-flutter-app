@@ -17,6 +17,38 @@ class MealItem extends StatelessWidget {
 
   void selectMeal() {}
 
+  String get complexityText {
+    switch (complexity) {
+      case Complexity.Simple:
+        return 'Simple';
+        break;
+      case Complexity.Hard:
+        return 'Hard';
+        break;
+      case Complexity.Challenging:
+        return 'Challenging';
+        break;
+      default:
+        return 'Unknow';
+    }
+  }
+
+  String get affordabiltyText {
+    switch (affordability) {
+      case Affordability.Luxurious:
+        return 'Luxurious';
+        break;
+      case Affordability.Pricey:
+        return 'Pricey';
+        break;
+      case Affordability.Affordable:
+        return 'Affordable';
+        break;
+      default:
+        return 'Unknow';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -59,6 +91,41 @@ class MealItem extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      const Icon(Icons.schedule),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Text('$duration min')
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      const Icon(Icons.work),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Text(complexityText)
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      const Icon(Icons.attach_money),
+                      SizedBox(
+                        width: 6,
+                      ),
+                      Text(affordabiltyText)
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
