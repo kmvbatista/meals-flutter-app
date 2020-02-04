@@ -21,6 +21,10 @@ class MealDetail extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+          FloatingActionButton(
+            onPressed: () => Navigator.of(context).pop(mealId),
+            child: Icon(Icons.delete),
+          )
         ],
       ),
     );
